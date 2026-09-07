@@ -146,7 +146,7 @@
 
 /* ── main h1 ── */
 .h1 {
-  font-family: 'Playfair Display', var(--font-playfair), serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: clamp(50px, 6.8vw, 96px);
   line-height: 1.0;
@@ -297,7 +297,7 @@
 
 .chipRight { bottom: 28px; right: 26px; text-align: center; min-width: 140px; }
 .chipStat  {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 15px; font-weight: 700;
   background: var(--grad-primary); -webkit-background-clip: text; background-clip: text; color: transparent;
   line-height: 1.3;
@@ -388,7 +388,7 @@
 .whyKicker { margin-bottom: 4px; }
 
 .whyTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 4.8vw, 66px);
   line-height: 1.07;
@@ -419,7 +419,7 @@
 .whyPromiseLeft { display: flex; flex-direction: column; gap: 10px; }
 
 .whyPromiseTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 28px; font-weight: 700;
   letter-spacing: -0.015em; color: var(--text-primary);
 }
@@ -461,7 +461,7 @@
 }
 
 .featTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 4.8vw, 64px);
   line-height: 1.07; letter-spacing: -0.025em;
@@ -527,7 +527,7 @@
 }
 
 .featCardTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(19px, 1.9vw, 25px); font-weight: 800;
   line-height: 1.2; letter-spacing: -0.015em;
   color: var(--text-primary);
@@ -663,7 +663,7 @@
 }
 
 .ctaTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(38px, 5vw, 68px); font-weight: 800;
   line-height: 1.07; letter-spacing: -0.025em;
   color: var(--text-primary); max-width: 680px;
@@ -691,7 +691,7 @@
 }
 
 .footerLogo {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-style: italic; font-weight: 800; font-size: 26px;
   background: var(--grad-primary); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -734,7 +734,7 @@
 }
 
 .calmTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 5vw, 66px);
   line-height: 1.07; letter-spacing: -0.025em;
@@ -797,7 +797,7 @@
 }
 
 .calmCardTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(20px, 2vw, 28px); font-weight: 800;
   line-height: 1.18; letter-spacing: -0.015em;
   color: var(--text-primary);
@@ -839,7 +839,7 @@
   gap: 4px;
 }
 .cycleDayNum {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 28px; font-weight: 800;
   color: var(--text-primary); line-height: 1;
 }
@@ -989,7 +989,7 @@
 }
 
 .joinTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(34px, 4.5vw, 58px); font-weight: 800;
   line-height: 1.08; letter-spacing: -0.025em;
   color: var(--text-primary);
@@ -1059,7 +1059,7 @@
 }
 
 .ecoTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 4.8vw, 62px);
   line-height: 1.07; letter-spacing: -0.025em;
@@ -1219,7 +1219,7 @@
 }
 
 .ecoNodeLabel {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(15px, 1.6vw, 20px); font-weight: 800;
   color: var(--text-primary);
   line-height: 1.15;
@@ -1261,7 +1261,7 @@
 .ecoStat:hover { background: rgba(255,148,187,0.04); }
 
 .ecoStatVal {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(26px, 3vw, 38px); font-weight: 800;
   line-height: 1; letter-spacing: -0.02em;
 }
@@ -1401,7 +1401,7 @@
 }
 
 .foundersTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: clamp(38px, 5vw, 68px);
   line-height: 1.06; letter-spacing: -0.025em;
@@ -1479,7 +1479,7 @@
 }
 
 .founderName {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 16px; font-weight: 700;
   color: #fff; line-height: 1.2;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -1513,7 +1513,7 @@
 }
 
 .founderOverlayName {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(22px, 2.2vw, 30px); font-weight: 800;
   color: #fff; line-height: 1.15;
   letter-spacing: -0.015em;
@@ -1579,4 +1579,300 @@
   .foundersRow { flex-direction: column; height: auto; gap: 12px; }
   .founderCard { flex: none; height: 340px; }
   .founderCard:hover { flex: none; }
+}
+
+/* ══════════════════════════════════════════════
+   FAQ SECTION
+   ══════════════════════════════════════════════ */
+.faqSection {
+  position: relative; z-index: 2;
+  padding: 110px 52px 120px;
+  overflow: hidden;
+}
+
+/* warm pink/lavender ambient wash */
+.faqSection::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(255,148,187,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 40%, rgba(185,131,255,0.08) 0%, transparent 55%);
+  pointer-events: none; z-index: 0;
+}
+
+.faqInner {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+}
+
+/* ── heading ── */
+.faqHead {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 16px; margin-bottom: 72px;
+}
+
+.faqTitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: clamp(36px, 4.8vw, 62px);
+  line-height: 1.07; letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.faqSub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; line-height: 1.76;
+  color: var(--text-secondary);
+  max-width: 480px;
+}
+
+/* ── accordion list ── */
+.faqList {
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+/* ── single accordion item ── */
+.faqItem {
+  border-radius: 20px;
+  border: 1px solid var(--faq-border, var(--border));
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+  position: relative;
+}
+
+/* subtle corner glow matching accent */
+.faqItem::before {
+  content: '';
+  position: absolute; top: -50px; right: -50px;
+  width: 180px; height: 180px; border-radius: 50%;
+  background: radial-gradient(circle, var(--faq-bg, transparent) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.faqItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.1);
+  border-color: var(--faq-accent, var(--border));
+}
+
+/* open state */
+.faqItemOpen {
+  border-color: var(--faq-accent, var(--border));
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, var(--faq-bg, var(--bg-card)) 0%, var(--bg-card) 70%);
+}
+
+/* ── question row (button) ── */
+.faqQuestion {
+  width: 100%;
+  display: flex; align-items: center; gap: 18px;
+  padding: 28px 32px;
+  background: transparent; border: none; cursor: pointer;
+  text-align: left;
+  transition: background .2s;
+}
+.faqQuestion:hover { background: rgba(255,148,187,0.03); }
+
+.faqNum {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  flex-shrink: 0; min-width: 24px;
+}
+
+.faqQuestionText {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 700;
+  line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.faqChevron {
+  flex-shrink: 0; display: flex; align-items: center;
+  transition: color .3s;
+}
+
+/* ── answer panel ── */
+.faqAnswer {
+  padding: 0 32px 28px 74px; /* aligns under question text */
+}
+
+.faqAnswerText {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15.5px; line-height: 1.76;
+  color: var(--text-secondary);
+}
+
+/* ── responsive ── */
+@media (max-width: 700px) {
+  .faqSection { padding: 80px 24px 90px; }
+  .faqQuestion { padding: 22px 22px; gap: 12px; }
+  .faqAnswer { padding: 0 22px 22px 22px; }
+  .faqNum { display: none; }
+}
+
+/* ══════════════════════════════════════════════
+   DOWNLOAD CTA SECTION
+   ══════════════════════════════════════════════ */
+.dlSection {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  margin: 0 52px 80px;
+  border-radius: 40px;
+  /* sky-blue background */
+  background: radial-gradient(ellipse at 30% 40%, #d4f3ff 0%, #b8e8fc 45%, #92d8f5 100%);
+  padding: 100px 52px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* subtle border glow */
+  box-shadow:
+    0 0 0 1px rgba(184,232,252,0.4),
+    0 40px 120px rgba(184,232,252,0.3),
+    0 80px 200px rgba(185,131,255,0.12);
+}
+
+/* decorative soft orbs */
+.dlOrb {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 65%);
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.dlOrbB {
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(185,131,255,0.18) 0%, transparent 65%);
+  bottom: -120px; right: -80px;
+  pointer-events: none;
+}
+
+/* curved decorative lines — replicate the arcs in the screenshot */
+.dlSection::before,
+.dlSection::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+.dlSection::before {
+  width: 900px; height: 900px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dlSection::after {
+  width: 1200px; height: 1200px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dlInner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 20px;
+  max-width: 720px;
+}
+
+/* logo — natural colors with sky glow on light bg */
+.dlLogoWrap {
+  filter:
+    drop-shadow(0 0 18px rgba(184,232,252,0.8))
+    drop-shadow(0 0 40px rgba(185,131,255,0.4));
+  animation: dlLogoGlow 3.5s ease-in-out infinite;
+  margin-bottom: 4px;
+}
+.dlLogoImg {
+  width: clamp(100px, 12vw, 160px) !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+@keyframes dlLogoGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 18px rgba(184,232,252,0.8))
+      drop-shadow(0 0 40px rgba(185,131,255,0.4));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 30px rgba(184,232,252,1))
+      drop-shadow(0 0 70px rgba(185,131,255,0.7));
+  }
+}
+
+/* eyebrow */
+.dlEyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(0,0,0,0.5);
+}
+
+/* headline — large, bold, dark */
+.dlTitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5.5vw, 74px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: #0c1a2e;
+  text-shadow: 0 2px 16px rgba(184,232,252,0.4);
+}
+
+/* sub */
+.dlSub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; line-height: 1.72;
+  color: rgba(0,0,0,0.55);
+  max-width: 440px;
+}
+
+/* download button — dark pill on sky blue */
+.dlBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 16px 38px;
+  border-radius: 99px;
+  background: #0c1a2e;
+  color: #b8e8fc;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transition: transform .28s ease, box-shadow .28s ease, background .28s ease;
+  white-space: nowrap;
+}
+.dlBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+  background: #1a2e44;
+}
+
+/* ── responsive ── */
+@media (max-width: 860px) {
+  .dlSection {
+    margin: 0 24px 60px;
+    padding: 80px 28px 90px;
+    border-radius: 28px;
+  }
+  .dlTitle { font-size: clamp(30px, 7vw, 48px); }
+}
+@media (max-width: 540px) {
+  .dlSection { margin: 0 16px 50px; padding: 64px 22px 72px; }
 }

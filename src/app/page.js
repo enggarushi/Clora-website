@@ -3,6 +3,7 @@ import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 import TypewriterGlow from "./TypewriterGlow";
 import ScrollReveal from "./ScrollReveal";
+import FAQSection from "./FAQSection";
 import bannerPicture from "./assets/BannerPicture.png";
 import cloraLogo from "./assets/clora_logo.png";
 import ss1 from "./assets/ss1.png";
@@ -695,6 +696,53 @@ export default function Home() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* ══════════ FAQs ══════════ */}
+      <FAQSection />
+
+      {/* ══════════ DOWNLOAD CTA ══════════ */}
+      <section className={styles.dlSection} id="download">
+        {/* decorative orbs */}
+        <div className={styles.dlOrb} />
+        <div className={styles.dlOrbB} />
+
+        <div className={styles.dlInner}>
+          {/* logo */}
+          <div className={styles.dlLogoWrap}>
+            <Image
+              src={cloraLogo}
+              alt="Clora"
+              className={styles.dlLogoImg}
+              width={160}
+              height={72}
+              priority
+            />
+          </div>
+
+          {/* eyebrow */}
+          <p className={styles.dlEyebrow}>YOUR HEALTH. YOUR RHYTHM. YOUR CLORA.</p>
+
+          {/* headline */}
+          <h2 className={styles.dlTitle}>
+            Start noticing what your<br />
+            body has been telling you.
+          </h2>
+
+          {/* sub */}
+          <p className={styles.dlSub}>
+            Download Clora and bring your cycle, questions, patterns,
+            and care journey into one thoughtful space.
+          </p>
+
+          {/* CTA */}
+          <a href="#" className={styles.dlBtn}>
+            Download Clora
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
         </div>
       </section>
 
