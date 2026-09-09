@@ -683,29 +683,156 @@
    FOOTER
    ══════════════════════════════════════════════ */
 .footer {
-  position: relative; z-index: 2;
-  padding: 46px 52px;
-  border-top: 1px solid var(--footer-border);
-  display: flex; align-items: center; justify-content: space-between;
-  max-width: 1280px; margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 30% 40%, #d4f3ff 0%, #b8e8fc 45%, #92d8f5 100%) !important;
+  margin-top: 0;
+  width: 100%;
 }
 
-.footerLogo {
+/* decorative orbs inside footer */
+.footerOrb {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.32) 0%, transparent 65%);
+  top: -280px; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.footerOrbB {
+  position: absolute;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(185,131,255,0.15) 0%, transparent 65%);
+  bottom: -100px; right: -60px;
+  pointer-events: none;
+}
+
+.footerInner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 52px 48px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ── top row — 3 columns with breathing room ── */
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 40px 80px;
+  align-items: start;
+  width: 100%;
+}
+
+/* brand col — never spans more than its column */
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.footerLogoImg {
+  width: 130px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 12px rgba(184,232,252,0.6));
+}
+
+.footerTagline {
   font-family: 'Nunito', sans-serif;
-  font-style: italic; font-weight: 800; font-size: 26px;
-  background: var(--grad-primary); -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-size: 15px; font-weight: 800;
+  line-height: 1.6;
+  color: #0c1a2e;
+  letter-spacing: 0.01em;
 }
 
-.footerLinks { display: flex; gap: 30px; }
+.footerDesc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px; line-height: 1.7;
+  color: rgba(12,26,46,0.6);
+}
+
+/* link columns */
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.footerColHead {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px; font-weight: 900;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: #0c1a2e;
+  margin-bottom: 8px;
+}
 
 .footerLink {
   font-family: 'Nunito', sans-serif;
-  font-size: 13px; font-weight: 600;
-  color: var(--text-muted); transition: color .2s;
+  font-size: 14px; font-weight: 600;
+  color: rgba(12,26,46,0.6);
+  transition: color .2s, transform .2s;
+  display: inline-block;
 }
-.footerLink:hover { color: var(--clora-pink); }
+.footerLink:hover {
+  color: #0c1a2e;
+  transform: translateX(4px);
+}
 
-.footerCopy { font-family: 'Nunito', sans-serif; font-size: 12px; color: var(--text-muted); }
+/* divider */
+.footerDivider {
+  height: 1px;
+  background: rgba(12,26,46,0.15);
+  margin: 48px 0 28px;
+}
+
+/* bottom row */
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footerCopy {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12.5px; font-weight: 700;
+  color: rgba(12,26,46,0.55);
+}
+
+.footerDisclaimer {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11.5px; line-height: 1.6;
+  color: rgba(12,26,46,0.45);
+  max-width: 520px;
+  text-align: right;
+}
+
+/* ── responsive ── */
+@media (max-width: 860px) {
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 40px;
+  }
+  .footerBrand { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .footerInner { padding: 52px 24px 36px; }
+  .footerTop { grid-template-columns: 1fr; gap: 36px; }
+  .footerBrand { grid-column: unset; }
+  .footerBottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .footerDisclaimer { text-align: left; }
+}
+
 
 /* ══════════════════════════════════════════════
    CALM / HOW IT WORKS — sky-blue accented section
@@ -1556,8 +1683,6 @@
   .whyPromise { padding: 36px 24px; flex-direction: column; gap: 22px; }
   .ctaBanner { padding: 56px 28px; }
   .joinBanner { padding: 48px 28px; }
-  .footer { flex-direction: column; gap: 20px; text-align: center; padding: 34px 24px; }
-  .footerLinks { flex-wrap: wrap; justify-content: center; gap: 16px; }
   .chipLeft { bottom: 14px; left: 14px; }
   .chipRight { bottom: 14px; right: 14px; }
   .chipTop { top: 12px; right: 14px; }

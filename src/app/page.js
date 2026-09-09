@@ -195,11 +195,11 @@ export default function Home() {
             <a href="#why-clora" className={styles.navLink}>Why Clora</a>
             <a href="#features"  className={styles.navLink}>Features</a>
             <a href="#calm"      className={styles.navLink}>How It Works</a>
+            <a href="#founders"  className={styles.navLink}>Meet Our Founders</a>
             <a href="#care"      className={styles.navLink}>Care</a>
           </nav>
           <div className={styles.headerRight}>
             <ThemeToggle />
-            <button className="btn-ghost">Sign In</button>
             <button className="btn-primary">Get Clora</button>
           </div>
         </div>
@@ -784,14 +784,47 @@ export default function Home() {
 
       {/* ══════════ FOOTER ══════════ */}
       <footer className={styles.footer}>
-        <span className={styles.footerLogo}>Clora</span>
-        <nav className={styles.footerLinks}>
-          <a href="#" className={styles.footerLink}>Privacy</a>
-          <a href="#" className={styles.footerLink}>Terms</a>
-          <a href="#" className={styles.footerLink}>Contact</a>
-          <a href="#" className={styles.footerLink}>Careers</a>
-        </nav>
-        <p className={styles.footerCopy}>© 2025 Clora · All rights reserved.</p>
+        <div className={styles.footerOrb} />
+        <div className={styles.footerOrbB} />
+
+        <div className={styles.footerInner}>
+
+          <div className={styles.footerTop}>
+
+            {/* brand */}
+            <div className={styles.footerBrand}>
+              <Image src={cloraLogo} alt="Clora" className={styles.footerLogoImg} width={130} height={58} />
+              <p className={styles.footerTagline}>Your health. Your rhythm. Your Clora.</p>
+            </div>
+
+            {/* links */}
+            <div className={styles.footerCol}>
+              <h4 className={styles.footerColHead}>Navigate</h4>
+              <a href="#intro"    className={styles.footerLink}>Home</a>
+              <a href="#features" className={styles.footerLink}>Features</a>
+              <a href="#founders" className={styles.footerLink}>Meet Our Founders</a>
+              <a href="#faq"      className={styles.footerLink}>FAQs</a>
+            </div>
+
+            {/* legal + download */}
+            <div className={styles.footerCol}>
+              <h4 className={styles.footerColHead}>Legal</h4>
+              <a href="#" className={styles.footerLink}>Privacy Policy</a>
+              <a href="#" className={styles.footerLink}>Terms of Service</a>
+              <a href="#" className={styles.footerLink}>Medical Disclaimer</a>
+              <a href="#" className={styles.footerLink}>Contact</a>
+            </div>
+
+          </div>
+
+          <div className={styles.footerDivider} />
+
+          <div className={styles.footerBottom}>
+            <p className={styles.footerCopy}>© 2025 Clora · Autumn HealthLabs · All rights reserved.</p>
+            <p className={styles.footerDisclaimer}>Not a medical device. Content is for informational purposes only.</p>
+          </div>
+
+        </div>
       </footer>
 
     </div>
