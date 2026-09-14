@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import TypewriterGlow from "./TypewriterGlow";
 import ScrollReveal from "./ScrollReveal";
@@ -242,7 +243,7 @@ export default function Home() {
                 <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <button className="btn-ghost">Watch Our Story</button>
+            <Link href="/story" className="btn-ghost">Watch Our Story</Link>
           </div>
           <p className={styles.heroTrust}>
             Trusted by women in <span>40+ countries</span> · Free to get started

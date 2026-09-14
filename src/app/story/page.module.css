@@ -1,0 +1,356 @@
+/* ══════════════════════════════════════════════
+   CLORA — WATCH OUR STORY PAGE
+   Design: centred single-column chapters
+   Font: Nunito
+   ══════════════════════════════════════════════ */
+
+.page {
+  position: relative;
+  overflow-x: hidden;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* ambient orbs */
+.orb { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; }
+.orbA { width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,148,187,0.15) 0%, transparent 65%); top: -120px; left: -180px; }
+.orbB { width: 500px; height: 500px; background: radial-gradient(circle, rgba(185,131,255,0.12) 0%, transparent 65%); top: 0; right: -150px; }
+
+/* ══════════════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════════════ */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  background: var(--nav-bg);
+  backdrop-filter: blur(24px) saturate(1.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerInner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrap { display: flex; align-items: center; }
+.logoImg  { height: 44px; width: auto; object-fit: contain; display: block; }
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px; font-weight: 700;
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border-strong);
+  padding: 9px 22px;
+  border-radius: 99px;
+  transition: color .22s, border-color .22s, background .22s, transform .22s;
+}
+.backLink:hover {
+  color: var(--text-primary);
+  border-color: var(--clora-pink);
+  background: rgba(255,148,187,0.06);
+  transform: translateX(-3px);
+}
+
+/* ══════════════════════════════════════════════
+   HERO — centred
+   ══════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  z-index: 2;
+  padding: 160px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+}
+
+.heroTitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(44px, 7vw, 86px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.heroAccent {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroSub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px; line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 500px;
+}
+
+/* founder pill */
+.founderPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 28px;
+  border-radius: 99px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+}
+
+.founderImgWrap {
+  position: relative;
+  width: 52px; height: 52px;
+  border-radius: 50%; overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,148,187,0.45);
+}
+
+.founderImg {
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+.founderName {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px; font-weight: 800;
+  color: var(--text-primary);
+}
+
+.founderRole {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px; font-weight: 600;
+  color: var(--clora-pink);
+  margin-top: 2px;
+}
+
+/* ══════════════════════════════════════════════
+   CHAPTERS — centred single column
+   ══════════════════════════════════════════════ */
+.chaptersSection {
+  position: relative;
+  z-index: 2;
+  padding: 20px 24px 80px;
+}
+
+.chaptersInner {
+  max-width: 760px;        /* centred readable column */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── single chapter card ── */
+.chapter {
+  border-radius: 26px;
+  border: 1px solid var(--ch-border, var(--border));
+  background: var(--ch-bg, var(--bg-card));
+  overflow: hidden;
+  transition: box-shadow .3s, transform .3s;
+}
+.chapter:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* left panel — not used anymore, kept for mobile compat */
+.chapterLeft { display: none; }
+
+/* the whole card is now just chapterRight */
+.chapterRight {
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+/* number + tag row at top of card */
+.chapterMeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.chapterBigNum {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.chapterTag {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10.5px; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 99px;
+  border: 1px solid;
+}
+
+.chapterTitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(22px, 2.8vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.chapterSubtitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: -6px;
+}
+
+.chapterBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.chapterBody p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15.5px; line-height: 1.84;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 620px;
+}
+
+.chapterQuote {
+  margin-top: 4px;
+  padding: 20px 28px;
+  border-top: 3px solid;
+  border-left: none;
+  border-radius: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; font-weight: 700;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.chapterQuoteMark {
+  font-size: 28px;
+  line-height: 0;
+  vertical-align: -8px;
+  margin-right: 4px;
+  font-style: normal;
+}
+
+/* ══════════════════════════════════════════════
+   CLOSING CTA
+   ══════════════════════════════════════════════ */
+.cta {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  margin: 20px 52px 80px;
+  border-radius: 40px;
+  background: radial-gradient(ellipse at 30% 40%, #d4f3ff 0%, #b8e8fc 45%, #92d8f5 100%) !important;
+  padding: 100px 52px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(184,232,252,0.4), 0 40px 120px rgba(184,232,252,0.3);
+}
+
+.ctaOrb {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 65%);
+  top: -220px; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.ctaInner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 22px;
+  max-width: 600px;
+}
+
+.ctaTitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5.5vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: #0c1a2e;
+}
+
+.ctaAccent {
+  background: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ctaSub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; line-height: 1.72;
+  color: rgba(12,26,46,0.6);
+  max-width: 420px;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.cta :global(.btn-ghost) {
+  color: #0c1a2e;
+  border-color: rgba(12,26,46,0.25);
+}
+.cta :global(.btn-ghost):hover {
+  border-color: #0c1a2e;
+  background: rgba(12,26,46,0.06);
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .hero { padding: 120px 20px 60px; }
+  .chaptersSection { padding: 20px 16px 60px; }
+  .chapterRight { padding: 32px 24px; align-items: center; text-align: center; }
+  .cta { margin: 0 16px 60px; padding: 72px 24px 80px; border-radius: 28px; }
+  .headerInner { padding: 0 24px; }
+}
