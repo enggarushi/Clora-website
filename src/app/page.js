@@ -154,6 +154,7 @@ const FOUNDERS = [
     accent: "#ff94bb",
     accentBg: "rgba(255,148,187,0.12)",
     bio: "Visionary behind the world's first women's health ecosystem — building the future of reproductive care.",
+    linkedin: "https://www.linkedin.com/in/devkumarmatalia",
   },
   {
     img: cofounderImg,
@@ -162,6 +163,7 @@ const FOUNDERS = [
     accent: "#b983ff",
     accentBg: "rgba(185,131,255,0.12)",
     bio: "Driving strategy and growth to bring Clora's mission of accessible women's healthcare to every corner of the world.",
+    linkedin: "https://www.linkedin.com/in/ratan-gupta-b244586b",
   },
   {
     img: execPartnerImg,
@@ -170,6 +172,7 @@ const FOUNDERS = [
     accent: "#b8e8fc",
     accentBg: "rgba(184,232,252,0.12)",
     bio: "Shaping partnerships and operations that turn Clora's vision into tangible impact for millions of women.",
+    linkedin: "https://www.linkedin.com/in/khushi-rai-139231331",
   },
   {
     img: brandManagerImg,
@@ -178,6 +181,7 @@ const FOUNDERS = [
     accent: "#ffb4a2",
     accentBg: "rgba(255,180,162,0.12)",
     bio: "Crafting the voice, identity, and presence that makes Clora a brand women trust with their most personal health stories.",
+    linkedin: null,
   },
 ];
 
@@ -479,10 +483,10 @@ export default function Home() {
                         <span className={styles.cycleDayNum}>Day 14</span>
                         <span className={styles.cycleDayLabel}>estimated phase</span>
                       </div>
-                      {/* phase labels */}
-                      <span className={styles.cycleLabel} style={{ top: "50%", left: "-12px", transform: "translateY(-50%)", background: "rgba(255,148,187,0.12)", color: "#ff94bb" }}>Period</span>
-                      <span className={styles.cycleLabel} style={{ top: "14%", right: "-8px", background: "rgba(255,180,162,0.12)", color: "#ffb4a2" }}>Follicular</span>
-                      <span className={styles.cycleLabel} style={{ bottom: "10%", left: "50%", transform: "translateX(-50%)", background: "rgba(185,131,255,0.12)", color: "#b983ff" }}>Luteal</span>
+                      {/* phase labels — kept inside the 220px container */}
+                      <span className={styles.cycleLabel} style={{ top: "50%", left: "4px", transform: "translateY(-50%)", background: "rgba(255,148,187,0.18)", color: "#ff94bb" }}>Period</span>
+                      <span className={styles.cycleLabel} style={{ top: "4px", right: "4px", background: "rgba(255,180,162,0.18)", color: "#ffb4a2" }}>Follicular</span>
+                      <span className={styles.cycleLabel} style={{ bottom: "4px", left: "50%", transform: "translateX(-50%)", background: "rgba(185,131,255,0.18)", color: "#b983ff" }}>Luteal</span>
                     </div>
                   )}
 
@@ -690,6 +694,22 @@ export default function Home() {
                   <p className={styles.founderOverlayRole} style={{ color: f.accent }}>{f.role}</p>
                   <h3 className={styles.founderOverlayName}>{f.name}</h3>
                   <p className={styles.founderOverlayBio}>{f.bio}</p>
+                  {f.linkedin && (
+                    <a
+                      href={f.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.founderLinkedIn}
+                      style={{ color: f.accent, borderColor: `${f.accent}55` }}
+                      aria-label={`${f.name} on LinkedIn`}
+                    >
+                      {/* LinkedIn icon */}
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  )}
                   {/* accent bottom bar */}
                   <div className={styles.founderAccentBar} style={{ background: f.accent }} />
                 </div>

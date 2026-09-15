@@ -885,9 +885,10 @@
   border-radius: 28px;
   border: 1px solid var(--card-border, var(--border));
   background: var(--bg-card);
-  padding: 44px 40px;
+  padding: 36px 36px;
   display: flex; flex-direction: column; gap: 14px;
   position: relative; overflow: hidden;
+  aspect-ratio: 1 / 1;
   transition: transform .3s, border-color .3s, box-shadow .3s;
 }
 .calmCard:hover {
@@ -945,14 +946,15 @@
 
 /* ── CYCLE visual ── */
 .calmVisual {
-  margin-top: 8px;
+  margin-top: auto;
   flex: 1;
   display: flex; align-items: center; justify-content: center;
+  min-height: 0;
 }
 
 .cycleVisual {
   position: relative;
-  width: 180px; height: 180px;
+  width: 220px; height: 220px;
   flex-shrink: 0;
 }
 .cycleSvg {
@@ -981,6 +983,9 @@
   font-size: 10px; font-weight: 700;
   padding: 4px 10px; border-radius: 99px;
   white-space: nowrap;
+  /* keep labels fully inside the container */
+  max-width: 80px;
+  text-align: center;
 }
 
 /* ── CHAT visual ── */
@@ -1649,8 +1654,29 @@
 .founderOverlayBio {
   font-family: 'Nunito', sans-serif;
   font-size: 13.5px; line-height: 1.65;
-  color: rgba(255,255,255,0.72);
-  max-width: 340px;
+  color: rgba(255,255,255,0.82);
+}
+
+.founderLinkedIn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 4px;
+  padding: 7px 18px;
+  border-radius: 99px;
+  border: 1px solid;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  transition: background .22s, transform .22s;
+  align-self: flex-start;
+}
+.founderLinkedIn:hover {
+  background: rgba(0,0,0,0.45);
+  transform: translateY(-2px);
 }
 
 /* coloured bottom bar */
@@ -1690,7 +1716,8 @@
   .featGridRow { grid-template-columns: 1fr; }
   .featCardWideInner { grid-template-columns: 1fr; }
   .featCardWideImg { width: 100%; justify-content: flex-start; }
-  .calmCard { padding: 30px 24px; }
+  .calmCard { padding: 28px 24px; }
+  .calmGrid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
